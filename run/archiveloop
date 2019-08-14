@@ -211,8 +211,10 @@ function archive_teslacam_clips () {
 
   ensure_cam_file_is_mounted
 
-  fix_errors_in_cam_file
+  #this doesn't work and will mess up the *.bin
+  #fix_errors_in_cam_file
 
+  log "Calling archive-clips.sh..."
   /root/bin/archive-clips.sh
 
   /root/bin/disconnect-archive.sh
